@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart</title>
+  </head>
+  <body>
+    <div class="heart"></div>
+    <style>
+      * {
+        background-color: black;
+      }
+
+      .heart {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        animation: heartbeat 1.5s infinite;
+      }
+
+      .heart:before,
+      .heart:after {
+        left: 100px;
+        top: 100px;
+        width: 100px;
+        height: 170px;
+        background-color: rgb(236, 4, 4);
+        border-radius: 130px 130px 0 0;
+        position: absolute;
+        content: "";
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+      }
+
+      .heart:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+      }
+
+      @keyframes heartbeat {
+        0% {
+          transform: scale(0.75);
+        }
+        20% {
+          transform: scale(1);
+        }
+        40% {
+          transform: scale(0.75);
+        }
+        60% {
+          transform: scale(1);
+        }
+        80% {
+          transform: scale(0.75);
+        }
+        100% {
+          transform: scale(0.75);
+        }
+      }
+    </style>
+  </body>
+</html>
